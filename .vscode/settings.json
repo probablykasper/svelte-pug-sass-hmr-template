@@ -1,0 +1,8 @@
+{
+  "eslint.validate": [ "javascript", "typescript", "svelte", "jade" ],
+  "eslint.probe": [ "javascript", "typescript", "svelte", "jade" ],
+  "editor.codeActionsOnSave": {
+    // disabled due to issue: https://github.com/myfreeweb/eslint-plugin-pug/issues
+    "source.fixAll.eslint": false
+  },
+}

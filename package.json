@@ -4,6 +4,9 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
+    "eslint": "^7.16.0",
+    "eslint-plugin-pug": "^1.2.2",
+    "eslint-plugin-svelte3": "^3.0.0",
     "nollup": "^0.13.13",
     "pug": "^3.0.0",
     "pug2svelte": "0.0.2-alpha.9",
@@ -23,6 +26,7 @@
     "dev:livereload": "rollup -c -w --environment LIVERELOAD",
     "dev:nollup": "nollup -c --hot --port 5000 --content-base ./public",
     "dev": "npm run dev:nollup",
-    "start": "sirv public"
+    "start": "sirv public",
+    "lint": "eslint . **/*.pug"
   }
 }

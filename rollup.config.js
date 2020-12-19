@@ -45,7 +45,7 @@ function serve() {
         {
           stdio: ['ignore', 'inherit', 'inherit'],
           shell: true,
-        }
+        },
       )
 
       process.on('SIGTERM', toExit)
@@ -66,7 +66,7 @@ export default {
     svelte({
       extensions: ['.pug'],
       preprocess: {
-        markup: ({ content }) => ({ code: pug2svelte(content, { pug: true }) })
+        markup: ({ content }) => ({ code: pug2svelte(content, { pug: true }) }),
       },
       // enable run-time checks when not in production
       dev: !isProduction,
