@@ -4,6 +4,7 @@ import commonjs from '@rollup/plugin-commonjs'
 import livereload from 'rollup-plugin-livereload'
 import { terser } from 'rollup-plugin-terser'
 import hmr from 'rollup-plugin-hot'
+import pug2svelte from 'pug2svelte'
 
 // Set this to true to pass the --single flag to sirv (this serves your
 // index.html for any unmatched route, which is a requirement for SPA
@@ -63,6 +64,10 @@ export default {
   },
   plugins: [
     svelte({
+      extensions: ['.pug'],
+      preprocess: {
+        markup: ({ content }) => ({ code: pug2svelte(content, { pug: true }) })
+      },
       // enable run-time checks when not in production
       dev: !isProduction,
       // we'll extract any component CSS out into
