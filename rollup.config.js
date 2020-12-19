@@ -4,6 +4,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
+import pug2svelte from 'pug2svelte';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -38,6 +39,10 @@ export default {
 	},
 	plugins: [
 		svelte({
+      extensions: ['.pug'],
+      preprocess: {
+        markup: ({ content }) => ({ code: pug2svelte(content, { pug: true }) })
+      },
 			compilerOptions: {
 				// enable run-time checks when not in production
 				dev: !production
