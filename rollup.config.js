@@ -64,9 +64,9 @@ export default {
   },
   plugins: [
     svelte({
-      extensions: ['.pug'],
+      extensions: ['.svelte'],
       preprocess: {
-        markup: ({ content }) => ({ code: pug2svelte(content, { pug: true }) }),
+        markup: ({ content }) => ({ code: pug2svelte(content) }),
       },
       // enable run-time checks when not in production
       dev: !isProduction,

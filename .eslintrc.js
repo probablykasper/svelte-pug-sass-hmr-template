@@ -10,19 +10,18 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: [
-    // 'svelte3',
-    'pug',
+    'svelte3',
   ],
   ignorePatterns: ['**/node_modules'],
-  // settings: {
-  //   'svelte3/ignore-styles': () => true,
-  // },
-  // overrides: [
-  //   {
-  //     files: ['*.svelte'],
-  //     processor: 'svelte3/svelte3',
-  //   },
-  // ],
+  settings: {
+    'svelte3/ignore-styles': () => true,
+  },
+  overrides: [
+    {
+      files: ['*.svelte'],
+      processor: 'svelte3/svelte3',
+    },
+  ],
   rules: {
     indent: ['error', 2],
     quotes: ['error', 'single', { 'avoidEscape': true } ],

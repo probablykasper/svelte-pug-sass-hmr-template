@@ -1,4 +1,4 @@
-script.
+<script>
   import { onMount } from 'svelte'
 
   export let name
@@ -13,13 +13,16 @@ script.
       clearInterval(interval)
     }
   })
+</script>
 
+<template lang='pug'>
 main
   h1 Hello {name}!
   p Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.
   p This page has been open for {counter}s.
+</template>
 
-style.
+<style>
   main {
     text-align: center;
     padding: 1em;
@@ -39,3 +42,4 @@ style.
       max-width: none;
     }
   }
+</style>
