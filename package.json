@@ -21,12 +21,11 @@
     "sirv-cli": "^1.0.0"
   },
   "scripts": {
+    "start": "nollup -c --hot --port 5000 --content-base ./public",
+    "start:rollup": "rollup -c -w",
+    "start:livereload": "rollup -c -w --environment LIVERELOAD",
     "build": "rollup -c",
-    "dev:rollup": "rollup -c -w",
-    "dev:livereload": "rollup -c -w --environment LIVERELOAD",
-    "dev:nollup": "nollup -c --hot --port 5000 --content-base ./public",
-    "dev": "npm run dev:nollup",
-    "start": "sirv public",
+    "serve": "sirv public",
     "lint": "eslint . **/*.pug"
   }
 }
