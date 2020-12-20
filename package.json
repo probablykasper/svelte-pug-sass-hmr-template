@@ -1,6 +1,5 @@
 {
-  "name": "hyperhodl",
-  "version": "1.0.0",
+  "name": "svelte-pug-sass-hmr-template",
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",

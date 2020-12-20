@@ -1,4 +1,4 @@
-# Hyperhodl
+# Svelte Pug Sass HMR Template
 
 ## Commands
 
